@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebDynpro xmlns="http://www.sap.com/wd/webdynpro">
+  <View name="ProductDetailView">
+    <Title>Product Detail</Title>
+    <!-- Image Gallery -->
+    <ImageView id="imageView1" source="{/product/images}" width="300" height="200"/>
+
+    <!-- Specifications Table -->
+    <Table id="specificationsTable">
+      <Columns>
+        <Column id="specNameColumn">
+          <Label text="Specification"/>
+        </Column>
+        <Column id="specValueColumn">
+          <Label text="Value"/>
+        </Column>
+      </Columns>
+      <Rows>
+        <Row>
+          <cells>
+            <cell>
+              <TextView text="Processor"/>
+            </cell>
+            <cell>
+              <TextView text="{/product/specifications/processor}"/>
+            </cell>
+          </cells>
+        </Row>
+        <Row>
+          <cells>
+            <cell>
+              <TextView text="Memory"/>
+            </cell>
+            <cell>
+              <TextView text="{/product/specifications/memory}"/>
+            </cell>
+          </cells>
+        </Row>
+        <!-- Add more rows as needed -->
+      </Rows>
+    </Table>
+
+
+    <!-- Pricing Information -->
+    <FormContainer id="pricingForm">
+      <FormElement id="priceElement">
+        <Label text="Price"/>
+        <TextView text="{/product/price}"/>
+      </FormElement>
+      <FormElement id="currencyElement">
+        <Label text="Currency"/>
+        <TextView text="{/product/currency}"/>
+      </FormElement>
+    </FormContainer>
+
+    <!-- Inventory Status -->
+    <FormContainer id="inventoryForm">
+      <FormElement id="inventoryElement">
+        <Label text="Inventory Status"/>
+        <TextView text="{/product/inventoryStatus}"/>
+      </FormElement>
+    </FormContainer>
+
+    <!-- Customer Reviews -->
+    <TextView id="customerReviews" text="Customer Reviews: {/product/customerReviews}"/>
+
+    <!-- Related Products -->
+    <Table id="relatedProductsTable">
+      <Columns>
+        <Column id="productNameColumn">
+          <Label text="Product Name"/>
+        </Column>
+      </Columns>
+      <Rows>
+          <!-- Data binding for related products -->
+        <Row>
+          <cells>
+            <cell>
+              <TextView text="{/product/relatedProducts/0/name}"/>
+            </cell>
+          </cells>
+        </Row>
+        <!-- Add more rows as needed -->
+      </Rows>
+    </Table>
+
+  </View>
+  <Controller name="ProductDetailViewController">
+    <method name="onInit">
+      <!-- Initialization logic -->
+    </method>
+    <method name="handleImageClick">
+      <!-- Handler for image clicks -->
+    </method>
+    <method name="handleRelatedProductClick">
+      <!-- Handler for related product clicks -->
+    </method>
+  </Controller>
+</WebDynpro>

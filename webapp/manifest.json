@@ -63,7 +63,7 @@
       },
       "routes": [
         {
-          "name": "main",
+          "name": "RouteMain",
           "pattern": "",
           "target": [
             "main"
