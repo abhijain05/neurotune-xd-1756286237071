@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mvc:View xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout"
+  xmlns:form="sap.ui.layout.form"
+  xmlns:core="sap.ui.core"
+  xmlns:richtexteditor="sap.ui.richtexteditor"
+  xmlns:viz="sap.viz.ui5"
+  controllerName="preview.app.controller.ProductDetailView"
+  displayBlock="true">
+  <Page title="ProductDetailView" enableScrolling="true">
+    <content>
+      <Title id="title_vfdff47g" text="Product Detail"/>
+      <Text id="imageView1" width="300" height="200"/>
+      <Table id="specificationsTable">
+        <items>
+          <ColumnListItem>
+                <cells>
+                        <Text text="Sample Data"/>
+                </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+      <Table id="relatedProductsTable">
+        <items>
+          <ColumnListItem>
+                <cells>
+                        <Text text="Sample Data"/>
+                </cells>
+          </ColumnListItem>
+        </items>
+      </Table>
+      <form:SimpleForm id="pricingForm">
+        <form:content>
+          <!-- Empty SimpleForm content -->
+        </form:content>
+      </form:SimpleForm>
+      <form:SimpleForm id="inventoryForm">
+        <form:content>
+          <!-- Empty SimpleForm content -->
+        </form:content>
+      </form:SimpleForm>
+      <Text id="customerReviews" text="Customer Reviews: {/product/customerReviews}"/>
+    </content>
+  </Page>
+</mvc:View>
